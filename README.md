@@ -1,7 +1,7 @@
 # asciiplot
 
 Web service that renders line plots as plain ASCII,
-using [gnuplot](http://www.gnuplot.info/). Deployed to asciiplot.com.
+using [gnuplot](http://www.gnuplot.info/). Deployed to [asciiplot.com](http://asciiplot.com).
 
 ## API examples
 
