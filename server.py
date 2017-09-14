@@ -29,6 +29,10 @@ def index():
     if not np.issubdtype(data.dtype, np.number):
         return usage(), 400, text_plain
 
+    if 'avg' in request.args:
+        avg = int(request.args['avg'])
+        data = np.array([np.convolve(x, np.ones((avg,)) / avg, mode='valid') for x in data.T]).T
+
     width = int(request.args.get('width', 80))
     height = int(request.args.get('height', 20))
 
